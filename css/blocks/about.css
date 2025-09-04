@@ -1,0 +1,84 @@
+.about {
+  margin-bottom: 76px;
+  text-align: center;
+}
+
+.container {
+}
+
+.about__container {
+}
+
+.title-wrapper {
+}
+
+.title {
+}
+
+.about .cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .card {
+  padding: 28px 32px;
+  width: 410px;
+  border-radius: 20px;
+  background: linear-gradient(
+      20deg,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(255, 255, 255, 0.2) 27.58%,
+      rgba(255, 255, 255, 0.2) 64.22%,
+      rgba(0, 0, 0, 0.12) 90.38%
+    ),
+    rgba(3, 45, 83, 0.56);
+}
+
+.about .card__two {
+  background: linear-gradient(
+      20deg,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(255, 255, 255, 0.2) 27.58%,
+      rgba(255, 255, 255, 0.2) 64.22%,
+      rgba(0, 0, 0, 0.12) 90.38%
+    ),
+    rgba(3, 45, 83, 0.68);
+}
+
+.about .card__three {
+  background: linear-gradient(
+      20deg,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(255, 255, 255, 0.2) 27.58%,
+      rgba(255, 255, 255, 0.2) 64.22%,
+      rgba(0, 0, 0, 0.12) 90.38%
+    ),
+    rgba(3, 45, 83, 0.76);
+}
+
+.card-number {
+  text-align: left;
+
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--belyy);
+
+  opacity: 0.6;
+}
+
+.card-title {
+  text-align: left;
+
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--belyy);
+}
+
+.card-desc {
+  text-align: left;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--belyy);
+
+  opacity: 0.76;
+}

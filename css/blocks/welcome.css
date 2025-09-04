@@ -1,0 +1,48 @@
+.welcome {
+  min-height: 810px;
+  height: 100vh;
+
+  display: flex;
+  color: var(--belyy);
+
+  background-color: var(--osnovnoy-siniy);
+  background-image: url("../../img/welcomebg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: 68px;
+}
+
+.welcome__heading {
+}
+
+.welcome__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.desc {
+  font-weight: 500;
+  font-size: 24px;
+  text-align: right;
+}
+
+.welcome .link-content {
+  color: var(--belyy);
+}
+
+.link-content svg {
+  stroke: var(--belyy);
+}
+
+.welcome .link-line {
+  var(--vtoroy-siniy);
+}
