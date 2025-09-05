@@ -21,15 +21,16 @@ body {
 
 .button {
   display: inline-block;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--belyy);
   border-radius: 40px;
-  letter-spacing: -0.03em;
   padding: 12px 30px;
 
+  font-weight: 400;
   font-size: 14px;
+  letter-spacing: -0.03em;
   text-align: center;
 
-  color: #ffffff;
+  color: var(--belyy);
 }
 
 h1 {

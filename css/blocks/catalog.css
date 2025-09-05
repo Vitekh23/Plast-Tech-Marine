@@ -17,7 +17,9 @@
 .catalog .cards-wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px;
+
 }
 
 .catalog .card {
@@ -29,7 +31,8 @@
   background: var(--belyy);
 }
 
-.card-title {
+.catalog .card-title {
+  margin-top: 16px;
   font-weight: 600;
   font-size: 20px;
   color: var(--osnovnoy-siniy);
@@ -37,7 +40,8 @@
   opacity: 0.76;
 }
 
-.card-decs {
+.catalog .card-decs {
+  margin-top: 8px;
   font-weight: 400;
   font-size: 14px;
   color: var(--osnovnoy-siniy);
@@ -47,6 +51,10 @@
 
 .price-wrapper {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+
 }
 
 .card-price {
@@ -58,4 +66,9 @@
 .card-button {
   border: 1px solid var(--osnovnoy-siniy);
   color: var(--osnovnoy-siniy);
+}
+
+.catalog .link-wrapper {
+  margin-top: 80px;
+  margin-bottom: 76px;
 }

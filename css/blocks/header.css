@@ -1,11 +1,11 @@
 .header {
   position: fixed;
   top: 0;
-  width: 100% ;
-  
+  width: 100%;
+
   padding: 24px 0;
   z-index: 9999;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
 .header__container {
@@ -15,8 +15,8 @@
 }
 
 .header_mini {
-background: var(--osnovnoy-siniy);
-border-radius: 0 0 20px 20px;
+  background: var(--osnovnoy-siniy);
+  border-radius: 0 0 20px 20px;
 }
 
 .header__logo {

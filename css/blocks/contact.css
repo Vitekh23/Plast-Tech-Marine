@@ -1,0 +1,116 @@
+.contact {
+  background: var(--belyy);
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  padding-bottom: 147px;
+}
+
+.contact-content {
+}
+
+.contact-form {
+  width: 1063px;
+  margin-left: auto;
+}
+
+.form-row {
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 109px;
+  margin-bottom: 44px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+    font-weight: 400;
+font-size: 19px;
+
+color: var(--tretiy-siniy);
+}
+
+.form-group input,
+.form-group textarea {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--osnovnoy-siniy);
+}
+
+.form-group textarea {
+  margin-top: 125px;
+resize: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+font-weight: 400;
+font-size: 19px;
+color: var(--tretiy-siniy);
+  opacity: 1;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+}
+
+.form-checkboxes {
+  margin-top: 61px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 129%;
+  color: var(--osnovnoy-siniy);
+}
+
+.checkbox-label span {
+  text-decoration: underline;
+text-decoration-skip-ink: none;
+}
+
+.checkbox-label input {
+  appearance: none;
+  -webkit-appearance: none;
+  margin-right: 8px;
+  border: 1px solid var(--osnovnoy-siniy);
+  width: 22px;
+  height: 22px;
+}
+
+.checkbox-label input:checked {
+  background-color: var(--osnovnoy-siniy);
+  border-color: var(--osnovnoy-siniy);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+
+.contact__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 152px;
+  
+}
+
+.contact-button {
+border: 1.75px solid var(--osnovnoy-siniy);
+border-radius: 70px;
+padding: 21px 52px;
+
+font-size: 24px;
+color: var(--osnovnoy-siniy);
+}
+
