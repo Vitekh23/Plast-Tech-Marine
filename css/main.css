@@ -7,8 +7,11 @@
 
 /* Blocks*/
 @import "./blocks/header.css";
+@import "./blocks/headerlang.css";
 @import "./blocks/welcome.css";
 @import "./blocks/about.css";
 @import "./blocks/catalog.css";
 @import "./blocks/blog.css";
 @import "./blocks/contact.css";
+@import "./blocks/modal-contacts.css";
+@import "./blocks/footer.css";

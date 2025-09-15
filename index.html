@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/main.css" />
 
     <script defer src="js/main.js"></script>
-    <script defer src="js/slider.js"></script>
+    <!-- <script defer src="js/slider.js"></script> -->
+    <script defer src="js/validation-contact.js"></script>
   </head>
 
   <body>
@@ -29,7 +30,100 @@
           </ul>
         </nav>
         <div class="header__actions">
-          <button class="header__button__ru" type="button">ru</button>
+          <div class="language-popover__wrapper">
+            <!-- Кнопка выбора языка -->
+            <button class="header__button__ru" data-popover-trigger>
+              <span class="header__button__lang">RU</span>
+              <svg
+                class="header__button__arrow"
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+              >
+                <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2" />
+              </svg>
+            </button>
+
+            <!-- Поповер (по умолчанию скрыт) -->
+            <div class="language-popover" data-popover>
+              <!-- Заголовок поповера с выбранным языком -->
+              <div class="language-popover__header">
+                <span class="language-popover__current">RU</span>
+                <svg
+                  class="language-popover__header-arrow"
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                >
+                  <path d="M1 5L5 1L9 5" stroke="#14395B" stroke-width="2" />
+                </svg>
+              </div>
+
+              <!-- Список языков -->
+              <div class="language-popover__list">
+                <button
+                  class="language-option language-option--active"
+                  data-lang="ru"
+                >
+                  <span class="language-option__text">RU</span>
+                  <span class="language-option__check">
+                    <!-- Активный -->
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <circle cx="10" cy="10" r="10" fill="white" />
+                      <path
+                        d="M14.6154 5.20531C14.1996 4.85641 13.6179 4.96316 13.3151 5.44224L8.99085 12.2952L6.60882 9.50139C6.25788 9.06918 5.66899 9.04835 5.29401 9.45453C4.91904 9.8581 4.89981 10.5377 5.25315 10.9673C5.25315 10.9673 8.14717 14.4458 8.563 14.7947C8.97884 15.1436 9.56052 15.0368 9.86339 14.5578L14.8222 6.70243C15.125 6.22074 15.0313 5.5516 14.6154 5.20531Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <button class="language-option" data-lang="en">
+                  <span class="language-option__text">Eng</span>
+                  <span class="language-option__check">
+                    <!-- Неактивный -->
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <circle cx="10" cy="10" r="10" fill="white" />
+                      <path
+                        d="M14.6154 5.20531C14.1996 4.85641 13.6179 4.96316 13.3151 5.44224L8.99085 12.2952L6.60882 9.50139C6.25788 9.06918 5.66899 9.04835 5.29401 9.45453C4.91904 9.8581 4.89981 10.5377 5.25315 10.9673C5.25315 10.9673 8.14717 14.4458 8.563 14.7947C8.97884 15.1436 9.56052 15.0368 9.86339 14.5578L14.8222 6.70243C15.125 6.22074 15.0313 5.5516 14.6154 5.20531Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <button class="language-option" data-lang="de">
+                  <span class="language-option__text">Ger</span>
+                  <span class="language-option__check">
+                    <!-- Неактивный -->
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <circle cx="10" cy="10" r="10" fill="white" />
+                      <path
+                        d="M14.6154 5.20531C14.1996 4.85641 13.6179 4.96316 13.3151 5.44224L8.99085 12.2952L6.60882 9.50139C6.25788 9.06918 5.66899 9.04835 5.29401 9.45453C4.91904 9.8581 4.89981 10.5377 5.25315 10.9673C5.25315 10.9673 8.14717 14.4458 8.563 14.7947C8.97884 15.1436 9.56052 15.0368 9.86339 14.5578L14.8222 6.70243C15.125 6.22074 15.0313 5.5516 14.6154 5.20531Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <button class="language-option" data-lang="ja">
+                  <span class="language-option__text">Ja</span>
+                  <span class="language-option__check">
+                    <!-- Неактивный -->
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <circle cx="10" cy="10" r="10" fill="white" />
+                      <path
+                        d="M14.6154 5.20531C14.1996 4.85641 13.6179 4.96316 13.3151 5.44224L8.99085 12.2952L6.60882 9.50139C6.25788 9.06918 5.66899 9.04835 5.29401 9.45453C4.91904 9.8581 4.89981 10.5377 5.25315 10.9673C5.25315 10.9673 8.14717 14.4458 8.563 14.7947C8.97884 15.1436 9.56052 15.0368 9.86339 14.5578L14.8222 6.70243C15.125 6.22074 15.0313 5.5516 14.6154 5.20531Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
           <button class="header__button button" type="button">
             Оставить заявку
           </button>
@@ -180,7 +274,7 @@
         <div class="container advant__container"></div>
       </section>
 
-      <div class="blog">
+      <!-- <div class="blog">
         <div class="container blog__container">
           <div class="title-wrapper">
             <h2 class="title">Текст текст текст текст текст текст</h2>
@@ -188,46 +282,6 @@
           <div class="swiper">
             <div class="card-wrapper">
               <ul class="card-list swiper-wrapper">
-                <li class="card-item swiper-slide">
-                  <a href="#!" class="card-link">
-                    <p class="data">дата</p>
-                    <p class="card-desc">
-                      Текст текст текст текст текст текст текст текст текст
-                      текст текст текст текст текст текст текст текст текст
-                      текст
-                    </p>
-                  </a>
-                </li>
-                <li class="card-item swiper-slide">
-                  <a href="#!" class="card-link">
-                    <p class="data">дата</p>
-                    <p class="card-desc">
-                      Текст текст текст текст текст текст текст текст текст
-                      текст текст текст текст текст текст текст текст текст
-                      текст
-                    </p>
-                  </a>
-                </li>
-                <li class="card-item swiper-slide">
-                  <a href="#!" class="card-link">
-                    <p class="data">дата</p>
-                    <p class="card-desc">
-                      Текст текст текст текст текст текст текст текст текст
-                      текст текст текст текст текст текст текст текст текст
-                      текст
-                    </p>
-                  </a>
-                </li>
-                <li class="card-item swiper-slide">
-                  <a href="#!" class="card-link">
-                    <p class="data">дата</p>
-                    <p class="card-desc">
-                      Текст текст текст текст текст текст текст текст текст
-                      текст текст текст текст текст текст текст текст текст
-                      текст
-                    </p>
-                  </a>
-                </li>
                 <li class="card-item swiper-slide">
                   <a href="#!" class="card-link">
                     <p class="data">дата</p>
@@ -289,51 +343,165 @@
             <div class="link-line"></div>
           </a>
         </div>
-      </div>
+      </div> -->
 
       <section class="contact">
         <div class="container contact__container">
           <h2 class="title">Текст текст текст текст текст текст</h2>
-            <div class="contact-form">
-              <div class="form-row">
-                <div class="form-group">
-                  <input type="text" placeholder="Имя и фамилия" required />
-                </div>
-                <div class="form-group">
-                  <input type="email" placeholder="E-mail" required />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                    <input type="category" placeholder="Категория" required />
-                </div>
-                <div class="form-group">
-                  <input type="tel" placeholder="Номер телефона" />
-                </div>
+          <div class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Имя и фамилия"
+                  required
+                  class="name-input"
+                />
+                <span class="error-message"></span>
               </div>
               <div class="form-group">
-                <textarea placeholder="Сообщение" rows="1"></textarea>
-              </div>
-              <div class="contact__bottom">
-                <div class="form-checkboxes">
-                  <label class="checkbox-label">
-                    <input type="checkbox" required />
-                    <p>Я согласен(а) на обработку персональных данных</p>
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" required />
-                    <p>Я согласен(а) с <span>политикой конфиденциальности</span></p>
-                  </label>
-                </div>
-                <button class="contact-button button" type="button">
-                  Оставить заявку
-                </button>
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  required
+                  class="email-input"
+                />
+                <span class="error-message"></span>
               </div>
             </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input
+                  type="category"
+                  placeholder="Категория"
+                  required
+                  class="category-input"
+                />
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  placeholder="Номер телефона"
+                  required
+                  class="phone-input"
+                />
+                <span class="error-message"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea
+                placeholder="Сообщение"
+                rows="1"
+                required
+                class="message-textarea"
+              ></textarea>
+              <span class="error-message"></span>
+            </div>
+            <div class="contact__bottom">
+              <div class="form-checkboxes">
+                <label class="checkbox-label">
+                  <input type="checkbox" required class="privacy-checkbox" />
+                  <p>Я согласен(а) на обработку персональных данных</p>
+                </label>
+                <span class="checkbox-error"></span>
+                <label class="checkbox-label">
+                  <input type="checkbox" required class="policy-checkbox" />
+                  <p>
+                    Я согласен(а) с <span>политикой конфиденциальности</span>
+                  </p>
+                </label>
+                <span class="checkbox-error"></span>
+              </div>
+              <button
+                id="modal-contacts-open"
+                class="contact-button button"
+                type="button"
+                onclick="validateAndOpenModal()"
+              >
+                Оставить заявку
+              </button>
+            </div>
           </div>
+        </div>
       </section>
+
+      <div id="success_send_modal" class="modal__container">
+        <div class="modal">
+          <h3>Заявка отправлена</h3>
+          <p>
+            Мы свяжемся с вами в течение 15 минут, чтобы уточнить все детали
+          </p>
+          <button
+            id="modal-contacts-close"
+            class="modal-button button"
+            type="button"
+          >
+            Закрыть
+          </button>
+        </div>
+      </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="left">
+          <div class="left__top">
+            <div class="top__logo">
+              <a href="#" class="footer__logo">
+                <img src="/img/footerlogo.svg" alt="" />
+              </a>
+            </div>
+            <div class="top__info">
+              <a href="tel:+78129990000" class="tel"> +7 (812) 999-00-00 </a>
+              <a href="mailto:email@yandex.ru" class="mail">email@yandex.ru </a>
+            </div>
+          </div>
+          <div class="left__bottom">
+            <a href="#!">Пользовательское соглашение</a>
+            <a href="#!">Политика конфиденциальности</a>
+          </div>
+        </div>
+        <div class="center">
+          <div class="line"></div>
+        </div>
+        <div class="right">
+          <div class="right__top">
+            <nav class="right__nav">
+              <ul>
+                <li><a href="#!">Главная</a></li>
+                <li><a href="#!">О компании</a></li>
+                <li><a href="#!">Каталог</a></li>
+                <li><a href="#!">Блог</a></li>
+                <li><a href="#!">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="right__info">
+              <p>
+                Текст текст текст текст текст текст <br />
+                текст текст текст текст текст текст
+              </p>
+              <p>
+                Текст текст текст текст текст текст <br />
+                текст текст текст текст текст текст
+              </p>
+            </div>
+          </div>
+          <div class="right__bottom">
+            <div class="bottom__text">
+              <p>Разработка сайта</p>
+              <p>2025, ООО «Plast Tech Marine LLC»</p>
+            </div>
+            <div class="bottom__logos">
+              <a href="#!"><img src="/img/vk.png" alt="" /></a>
+              <a href="#!"><img src="/img/inst.png" alt="" /></a>
+              <a href="#!"><img src="/img/tg.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
   </body>
 </html>

@@ -31,10 +31,10 @@
 .form-group {
   display: flex;
   flex-direction: column;
-    font-weight: 400;
-font-size: 19px;
+  font-weight: 400;
+  font-size: 19px;
 
-color: var(--tretiy-siniy);
+  color: var(--tretiy-siniy);
 }
 
 .form-group input,
@@ -45,14 +45,14 @@ color: var(--tretiy-siniy);
 
 .form-group textarea {
   margin-top: 125px;
-resize: none;
+  resize: none;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-font-weight: 400;
-font-size: 19px;
-color: var(--tretiy-siniy);
+  font-weight: 400;
+  font-size: 19px;
+  color: var(--tretiy-siniy);
   opacity: 1;
 }
 
@@ -78,7 +78,7 @@ color: var(--tretiy-siniy);
 
 .checkbox-label span {
   text-decoration: underline;
-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
 }
 
 .checkbox-label input {
@@ -102,15 +102,47 @@ text-decoration-skip-ink: none;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 152px;
-  
 }
 
 .contact-button {
-border: 1.75px solid var(--osnovnoy-siniy);
-border-radius: 70px;
-padding: 21px 52px;
+  border: 1.75px solid var(--osnovnoy-siniy);
+  border-radius: 70px;
+  padding: 21px 52px;
 
-font-size: 24px;
-color: var(--osnovnoy-siniy);
+  font-size: 24px;
+  color: var(--osnovnoy-siniy);
 }
 
+.error-message {
+  display: none;
+  color: red;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: red !important;
+}
+
+.checkbox-error {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-left: 30px; 
+}
+
+.checkbox-label.error p {
+  color: red;
+}
+
+.checkbox-label.error input {
+  border-color: red !important;
+}

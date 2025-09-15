@@ -1,22 +1,28 @@
 .header {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1440px;
+  width: calc(100% - 5px);
+  border-radius: 12px;
 
-  padding: 24px 0;
+  padding: 12px 0;
   z-index: 9999;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .header_mini {
   background: var(--osnovnoy-siniy);
-  border-radius: 0 0 20px 20px;
+
+  transition: all 0.3s ease;
 }
 
 .header__logo {
@@ -37,10 +43,109 @@
   gap: 62px;
 }
 
+.language-popover__wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Кнопка */
 .header__button__ru {
   text-transform: uppercase;
   color: var(--belyy);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
-.header__button {
+.header__button__ru:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header__button__arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Когда открыт поповер — кнопку скрываем */
+.language-popover.active ~ .header__button__ru,
+.header__button__ru.hidden {
+  display: none;
+}
+
+/* Поповер */
+.language-popover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 161px;
+  padding: 16px 13px 0px 13px;
+  background: var(--belyy);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+  transition: all 0.2s ease;
+  z-index: 1000;
+
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--osnovnoy-siniy);
+}
+
+.language-popover.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Заголовок */
+.language-popover__header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 28px;
+}
+
+.language-popover__current {
+  color: var(--osnovnoy-siniy);
+}
+
+/* Список языков */
+.language-popover__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: var(--osnovnoy-siniy);
+  cursor: pointer;
+}
+
+/* Ховер для чекбоксов */
+.language-option:hover svg circle {
+  fill: #d0d9eb;
+}
+.language-option:hover svg path {
+  fill: #d0d9eb;
+}
+
+/* Активный чекбокс */
+.language-option.language-option--active svg circle {
+  fill: #6190bb;
+}
+.language-option.language-option--active svg path {
+  fill: white;
 }
